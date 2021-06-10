@@ -1,0 +1,24 @@
+{
+  "name": "outfrontjs",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "console logs, errors and warning on the screen",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "logs",
+    "error",
+    "console.log"
+  ],
+  "author": "Gaurav Singh",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.7",
+    "requirejs": "^2.3.6"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.1"
+  }
+}
