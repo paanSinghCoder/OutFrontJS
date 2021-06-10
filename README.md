@@ -11,7 +11,7 @@
   <h3 align="center">OutFront JS 🚀</h3>
 
   <p align="center">
-    DOM Console logger for JavaScript.
+    Console log for mobile browsers.
     <br />
     <a href="https://outfront-demo.netlify.app" target="_blank"><strong>See Demo »</strong></a>
     <br />
