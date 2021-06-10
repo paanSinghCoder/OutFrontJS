@@ -4,16 +4,33 @@
   "type": "module",
   "description": "console logs, errors and warning on the screen",
   "main": "index.js",
+  "bin": "index.js",
   "scripts": {
     "start": "nodemon index.js"
   },
+  "files": [
+    "index.js",
+    "package.json",
+    "README.md",
+    "CHANGELOG.md"
+  ],
   "keywords": [
     "logs",
     "error",
-    "console.log"
+    "console.log",
+    "outfrontjs"
   ],
+  "licence": "MIT",
   "author": "Gaurav Singh",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paanSinghCoder/OutFrontJS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/paanSinghCoder/OutFrontJS/issues"
+  },
+  "homepage": "https://github.com/paanSinghCoder/OutFrontJS#readme",
   "dependencies": {
     "nodemon": "^2.0.7",
     "requirejs": "^2.3.6"
