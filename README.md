@@ -21,7 +21,7 @@
   <p align="center">
     DOM Console logger for JavaScript.
     <br />
-    <a href="" target="_blank"><strong>See Demo »</strong></a>
+    <a href="https://outfront-demo.netlify.app" target="_blank"><strong>See Demo »</strong></a>
     <br />
     <br />
     <a href="https://github.com/paansinghcoder/outfrontjs/issues">Report Bug</a>
@@ -60,7 +60,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Demo screenshot][screenshot]](![demo-img](https://user-images.githubusercontent.com/9462473/121516034-6a315100-ca0b-11eb-8455-793ca024ec01.jpeg))
 
 OutFront JS intercepts all your console.log, console.warn, console.error and errors and logs them into a popup on screen itself(DOM). This can be useful in scenarios where you don't have access to Chrome, Firefox, Edge etc. inspect panels.
 
@@ -79,7 +79,7 @@ OutFront JS intercepts following console methods currently:
 ## Demo
 
 A demo is worth a thousand words.
-[See demo](https://#)
+[See demo](https://outfront-demo.netlify.app/)
 
 
 
