@@ -201,8 +201,10 @@ window.onerror = (message, source, lineno, colno, error) => {
 	appendToContainer(message + '::' + source.split('/')[3] + ':' + lineno, 'error')
 }
 
-const init = () => {
+const outfront = () => {
 	createButtonAndContainer()
 }
 
-window.onload = () => init()
+// window.onload = () => init()
+
+export default outfront
