@@ -6,7 +6,7 @@
   "main": "index.js",
   "bin": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "files": [
     "index.js",
@@ -31,10 +31,7 @@
     "url": "https://github.com/paanSinghCoder/OutFrontJS/issues"
   },
   "homepage": "https://github.com/paanSinghCoder/OutFrontJS#readme",
-  "dependencies": {
-    "nodemon": "^2.0.7",
-    "requirejs": "^2.3.6"
-  },
+  "dependencies": {},
   "devDependencies": {
     "prettier": "^2.3.1"
   }
