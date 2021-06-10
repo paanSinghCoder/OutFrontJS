@@ -39,6 +39,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#demo">Demo</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -78,7 +79,7 @@ OutFront JS intercepts following console methods currently:
 
 
 <!-- GETTING STARTED -->
-## Demo
+### Demo
 
 A demo is worth a thousand words.
 [See demo](https://outfront-demo.netlify.app/)
@@ -143,6 +144,8 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 
 <!-- CONTRIBUTING -->
 ## Contributing
+
+**Consider starring this project on Github.**
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
