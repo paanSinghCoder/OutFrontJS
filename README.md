@@ -13,7 +13,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://user-images.githubusercontent.com/9462473/121512700-9f3ba480-ca07-11eb-8020-c873e045c6ca.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">OutFront JS 🚀</h3>
