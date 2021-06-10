@@ -68,6 +68,21 @@ Example scenario to use OutFront JS:
 * You want to debug your webapp in a mobile browser where access to console is not present. Example: Chinese mobile browsers.
 * You want your tester to see console.logs straight on the screen.
 
+OutFront JS intercepts following console methods currently:
+* `console.log`
+* `console.warn`
+* `console.error`
+* `Inbuilt Javascript errors`
+
+
+<!-- GETTING STARTED -->
+## Demo
+
+A demo is worth a thousand words.
+[See demo](https://#)
+
+
+
 ### Built With
 
 OutFront is extremely light weight and built with: 
@@ -79,6 +94,7 @@ OutFront is extremely light weight and built with:
 ## Getting Started
 
 OutFront can be used with any web based projects and frameworks such as React, Angular etc.
+
 
 ### Installation
 
