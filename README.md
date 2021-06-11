@@ -10,7 +10,6 @@
 
   <h3 align="center">OutFront JS 🚀</h3>
   
-  <a href="https://www.producthunt.com/posts/outfront-js?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-outfront-js" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=299755&theme=light" alt="OutFront JS - Console log for mobile browsers. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
   <p align="center">
     Console log for mobile browsers.
@@ -55,6 +54,10 @@
 <p align="center">
     <img alt="screenshot-outfront" width="300px" src="https://user-images.githubusercontent.com/9462473/121516751-3571c980-ca0c-11eb-97ba-63aad767bafd.png" />
 </p>
+
+  <p align="center">
+      <a href="https://www.producthunt.com/posts/outfront-js?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-outfront-js" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=299755&theme=light" alt="OutFront JS - Console log for mobile browsers. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+  </p>
 
 
 <!-- ABOUT THE PROJECT -->
