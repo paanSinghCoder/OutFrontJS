@@ -19,6 +19,8 @@
     <a href="https://github.com/paansinghcoder/outfrontjs/issues">Report Bug</a>
     ·
     <a href="https://github.com/paanSinghCoder/OutFrontJS/issues">Request Feature</a>
+    ·
+    <a href="https://www.npmjs.com/package/outfront">See on NPM</a>
   </p>
 </p>
 
