@@ -65,7 +65,19 @@ const logoTextStyles = {
 	color: '#525EF9'
 }
 
+const notificationBadgeStyles = {
+	position: 'absolute',
+	display: 'none',
+	top: '-3px',
+	right: '6px',
+	width: '12px',
+	height: '12px',
+	borderRadius: '50%',
+	backgroundColor: 'red'
+}
+
 let outfrontLogUl = document.createElement('UL') // Memory leak alert
+const notificationBadge = document.createElement('SPAN') // Memory leak alert
 
 const createButtonAndContainer = () => {
 	try {
@@ -132,10 +144,12 @@ const createButtonAndContainer = () => {
 						? floatButtonStyles.opacity
 						: buttonDefaultOpacity.opacity)
 		)
+
 		toggleBtn.addEventListener('click', () => {
 			if (container.style.display === 'none') {
 				container.style.display = 'block'
 				toggleBtn.style.opacity = buttonDefaultOpacity.opacity
+				notificationBadge.style.display = 'none'
 			} else {
 				container.style.display = 'none'
 				toggleBtn.style.opacity = floatButtonStyles.opacity
@@ -143,10 +157,28 @@ const createButtonAndContainer = () => {
 		})
 		// Create float button end
 
+		// Create notification badge start
+		// const notificationBadge = document.createElement('SPAN') // initialized in global scope
+		notificationBadge.id = 'outfront-badge'
+		// notificationBadge.innerText = 'b'
+		for (let property in notificationBadgeStyles) {
+			notificationBadge.style[property] = notificationBadgeStyles[property]
+		}
+		toggleBtn.append(notificationBadge)
+		// Create notification badge start
+
 		document.body.appendChild(container)
 		document.body.appendChild(toggleBtn)
 	} catch (error) {
 		console.log(error)
+	}
+}
+
+const toggleNotoficationBadge = color => {
+	// toggle notification badge only if container is closed
+	if (document.getElementById('outfront-container').style.display !== 'block') {
+		notificationBadge.style.display = 'block'
+		notificationBadge.style.backgroundColor = color
 	}
 }
 
@@ -162,14 +194,17 @@ const appendToContainer = (msg, type) => {
 	if (type === 'log') {
 		logLi.style.color = 'black'
 		logLi.style.backgroundColor = 'white'
+		toggleNotoficationBadge('cyan')
 	} else if (type === 'warn') {
 		logLi.style.color = 'orange'
 		logLi.style.backgroundColor = '#fff3e7'
+		toggleNotoficationBadge('orange')
 		// logLi.style.borderTop = '0.2px solid orange'
 		// logLi.style.borderBottom = '0.1px solid orange'
 	} else if (type === 'error') {
 		logLi.style.color = 'red'
 		logLi.style.backgroundColor = '#ffeaea'
+		toggleNotoficationBadge('red')
 		// logLi.style.borderTop = '0.2px solid red'
 		// logLi.style.borderBottom = '0.1px solid red'
 	}
@@ -205,6 +240,6 @@ const outfront = () => {
 	createButtonAndContainer()
 }
 
-// window.onload = () => init()
+// window.onload = () => outfront()
 
 export default outfront
