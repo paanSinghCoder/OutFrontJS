@@ -66,7 +66,7 @@
 <!-- ![demo-img](https://user-images.githubusercontent.com/9462473/121516034-6a315100-ca0b-11eb-8455-793ca024ec01.jpeg | width=100) -->
 <!-- ![screenshot](https://user-images.githubusercontent.com/9462473/121516751-3571c980-ca0c-11eb-97ba-63aad767bafd.png) -->
 
-OutFront provides an onscreen console for mobile websites on mobile browsers 🔥
+OutFront provides an onscreen console for mobile browsers 🔥
 
 Intercepts all your console.log, console.warn, console.error and errors and logs them into a popup on screen itself(DOM). This can be useful in scenarios where you don't have access to Chrome, Firefox, Edge etc. inspect panels.
 
