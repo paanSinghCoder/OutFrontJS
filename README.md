@@ -99,7 +99,7 @@ OutFront is extremely light weight and built with:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-OutFront can be used with any web based projects and frameworks such as React, Angular etc.
+OutFront **can be used with any web based projects and frameworks** such as React, Angular etc.
 
 
 ### Installation
