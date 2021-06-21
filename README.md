@@ -12,7 +12,7 @@
   
 
   <p align="center">
-    Console log for mobile browsers.
+    Console for mobile browsers.
     <br />
     <a href="https://outfront-demo.netlify.app" target="_blank"><strong>See Demo »</strong></a>
     <br />
