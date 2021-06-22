@@ -81,6 +81,9 @@ OutFront JS intercepts following console methods currently:
 * `Inbuilt Javascript errors`
 
 
+I use OutFront JS at <a href="https://okcredit.in">OkCredit</a> to debug mobile web apps.
+
+
 <!-- GETTING STARTED -->
 ### Demo
 
