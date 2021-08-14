@@ -144,7 +144,9 @@ Note: Above example shows usage with React but, OutFront is built with vanilla J
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/paansinghcoder/outfrontjs/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/paansinghcoder/outfrontjs/issues) for the list of known issues.
+
+See the [Product board](https://github.com/paanSinghCoder/OutFrontJS/projects/1) for the list of proposed features
 
 
 
