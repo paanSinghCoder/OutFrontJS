@@ -71,7 +71,7 @@ OutFront provides an onscreen console for mobile browsers 🔥
 Intercepts all your console.log, console.warn, console.error and errors and logs them into a popup on screen itself(DOM). This can be useful in scenarios where you don't have access to Chrome, Firefox, Edge etc. inspect panels.
 
 Example scenario to use OutFront JS:
-* You want to debug your webapp in a mobile browser where access to console is not present. Example: Chinese mobile browsers.
+* You want to debug your webapp in a mobile browser or Webview where access to console is not present. Example: Chinese mobile browsers.
 * You want your tester to see console.logs straight on the screen.
 
 OutFront JS intercepts following console methods currently:
