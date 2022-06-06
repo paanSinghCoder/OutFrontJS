@@ -7,7 +7,7 @@
   "bin": "src/index.js",
   "scripts": {
     "build": "babel src -d dist",
-    "publish": "npm publish",
+    "publish": "npm run build && npm publish",
     "link": "npm run build && npm link"
   },
   "files": [
