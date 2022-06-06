@@ -12,6 +12,8 @@ import {
 let consoleLog = console.log
 let consoleError = console.error
 let consoleWarn = console.warn
+let consoleInfo = console.info
+let consoleDebug = console.debug
 
 let outfrontLogUl = document.createElement('UL') // Memory leak alert
 const notificationBadge = document.createElement('SPAN') // Memory leak alert
@@ -138,7 +140,7 @@ const appendToContainer = (msg, type) => {
 	}
 	// Create li end
 
-	if (type === 'log') {
+	if (type === 'log' || type === 'info') {
 		logLi.style.color = 'black'
 		logLi.style.backgroundColor = 'white'
 		toggleNotoficationBadge('cyan')
@@ -148,12 +150,14 @@ const appendToContainer = (msg, type) => {
 		toggleNotoficationBadge('orange')
 		// logLi.style.borderTop = '0.2px solid orange'
 		// logLi.style.borderBottom = '0.1px solid orange'
+	} else if (type === 'debug') {
+		logLi.style.color = '#0000FF'
+		logLi.style.backgroundColor = '#e6e6ff'
+		toggleNotoficationBadge('#0000FF')
 	} else if (type === 'error') {
 		logLi.style.color = 'red'
 		logLi.style.backgroundColor = '#ffeaea'
 		toggleNotoficationBadge('red')
-		// logLi.style.borderTop = '0.2px solid red'
-		// logLi.style.borderBottom = '0.1px solid red'
 	}
 	let textNode = document.createTextNode(msg)
 	logLi.appendChild(textNode)
@@ -167,6 +171,16 @@ const appendToContainer = (msg, type) => {
 console.log = msg => {
 	consoleLog(msg) // do the usual logging as well
 	appendToContainer(msg, 'log')
+}
+
+console.info = msg => {
+	consoleInfo(msg) // do the usual logging as well
+	appendToContainer(msg, 'info')
+}
+
+console.debug = msg => {
+	consoleDebug(msg) // do the usual logging as well
+	appendToContainer(msg, 'debug')
 }
 
 console.error = msg => {
