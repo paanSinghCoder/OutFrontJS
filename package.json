@@ -3,10 +3,12 @@
   "version": "1.1.2",
   "type": "module",
   "description": "console logs, errors and warning on the screen",
-  "main": "index.js",
-  "bin": "index.js",
+  "main": "src/index.js",
+  "bin": "src/index.js",
   "scripts": {
-    "start": "node index.js"
+    "build": "babel src -d dist",
+    "publish": "npm publish",
+    "link": "npm run build && npm link"
   },
   "files": [
     "index.js",
@@ -31,8 +33,11 @@
     "url": "https://github.com/paanSinghCoder/OutFrontJS/issues"
   },
   "homepage": "https://github.com/paanSinghCoder/OutFrontJS#readme",
-  "dependencies": {},
   "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.18.2",
     "prettier": "^2.3.1"
   }
 }
