@@ -19,6 +19,12 @@ const containerStyles = {
 	boxShadow: '2px 4px 5px 3px rgba(224, 224, 224, 0.8)'
 }
 
+const navbarStyles = {
+	position: "sticky",
+	top: 0,
+	backgroundColor: "#fff"
+}
+
 const floatButtonStyles = {
 	opacity: 0.8,
 	position: 'fixed',
@@ -54,7 +60,7 @@ const clearBtnStyles = {
 	paddingRight: '10px',
 	paddingTop: '3px',
 	opacity: 0.5,
-	fontSize: '15px',
+	fontSize: '20px',
 	backgroundColor: 'transparent',
 	border: 'none'
 }
@@ -93,6 +99,14 @@ const createButtonAndContainer = () => {
 		}
 		// Create container end
 
+		// Create navbar start
+		const navbar = document.createElement('DIV')
+		navbar.id = 'outfront-navbar'
+		for (let property in navbarStyles) {
+			navbar.style[property] = navbarStyles[property]
+		}
+		// Create navbar end
+
 		// Create clear console button start
 		const clearBtn = document.createElement('BUTTON') // button
 		clearBtn.id = 'outfront-clear-btn'
@@ -101,7 +115,7 @@ const createButtonAndContainer = () => {
 			clearBtn.style[property] = clearBtnStyles[property]
 		}
 		clearBtn.addEventListener('click', () => (outfrontLogUl.innerHTML = ''))
-		container.appendChild(clearBtn)
+		navbar.appendChild(clearBtn)
 		// Create clear console button end
 
 		//Create logo text start
@@ -111,7 +125,7 @@ const createButtonAndContainer = () => {
 		for (let property in logoTextStyles) {
 			logo.style[property] = logoTextStyles[property]
 		}
-		container.appendChild(logo)
+		navbar.appendChild(logo)
 		// Create logo text end
 
 		// hr start
@@ -120,8 +134,10 @@ const createButtonAndContainer = () => {
 		hr.style.marginBottom = 0
 		hr.style.border = 0
 		hr.style.borderTop = '1px solid #eaeaea'
-		container.appendChild(hr)
+		navbar.appendChild(hr)
 		// hr end
+
+		container.appendChild(navbar)
 
 		//create ul start
 		outfrontLogUl.id = 'outfront-log'
