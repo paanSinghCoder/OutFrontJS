@@ -1,6 +1,6 @@
 {
   "name": "outfront",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "type": "module",
   "description": "console logs, errors and warning on the screen",
   "main": "index.js",
