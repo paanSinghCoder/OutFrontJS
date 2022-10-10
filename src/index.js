@@ -1,3 +1,4 @@
+import { DEFAULT_CONFIG } from './constants.js'
 import {
 	containerStyles,
 	navbarStyles,
@@ -18,10 +19,22 @@ let consoleDebug = console.debug
 let outfrontLogUl = document.createElement('UL') // Memory leak alert
 const notificationBadge = document.createElement('SPAN') // Memory leak alert
 
-let isFullScreen = false
+const createButtonAndContainer = (options = {}) => {
+	const config = { ...DEFAULT_CONFIG, ...options }
 
-const createButtonAndContainer = configrrr => {
-	// console.log('configrrr')
+	let { fullSize, opacity, defaultOpen } = config
+
+	/* Sets default container size and toggles on button tap */
+	const changeContainerSize = container => {
+		if (fullSize) {
+			container.style.width = '90%'
+			container.style.height = '85%'
+		} else {
+			container.style.width = '300px'
+			container.style.height = '450px'
+		}
+		fullSize = !fullSize
+	}
 
 	try {
 		// Create container start
@@ -30,9 +43,10 @@ const createButtonAndContainer = configrrr => {
 		for (let property in containerStyles) {
 			container.style[property] = containerStyles[property]
 		}
-		// if (opacity in config) {
-		// 	container.style.margin = config.opacity
-		// }
+
+		changeContainerSize(container)
+
+		container.style.opacity = Number(opacity) / 10
 		// Create container end
 
 		// Create navbar start
@@ -46,7 +60,7 @@ const createButtonAndContainer = configrrr => {
 		// Create clear console button start
 		const clearBtn = document.createElement('BUTTON') // button
 		clearBtn.id = 'outfront-clear-btn'
-		clearBtn.innerText = '⟲' // 🗑️ ⟲ ⌫
+		clearBtn.innerText = '⟲'
 		for (let property in navBtnStyles) {
 			clearBtn.style[property] = navBtnStyles[property]
 		}
@@ -62,15 +76,7 @@ const createButtonAndContainer = configrrr => {
 			sizeToggleBtn.style[property] = navBtnStyles[property]
 		}
 		sizeToggleBtn.addEventListener('click', () => {
-			if (isFullScreen) {
-				container.style.width = '300px'
-				container.style.height = '450px'
-				isFullScreen = false
-			} else {
-				container.style.width = '90%'
-				container.style.height = '85%'
-				isFullScreen = true
-			}
+			changeContainerSize(container)
 		})
 		navbar.appendChild(sizeToggleBtn)
 		// Create size toggle button END
@@ -122,14 +128,27 @@ const createButtonAndContainer = configrrr => {
 						: buttonDefaultOpacity.opacity)
 		)
 
-		toggleBtn.addEventListener('click', () => {
-			if (container.style.display === 'none') {
+		const toggleContainerOpen = bool => {
+			if (bool) {
 				container.style.display = 'block'
 				toggleBtn.style.opacity = buttonDefaultOpacity.opacity
 				notificationBadge.style.display = 'none'
 			} else {
 				container.style.display = 'none'
 				toggleBtn.style.opacity = floatButtonStyles.opacity
+			}
+		}
+
+		/* Open by default if defaultOpen = true */
+		if (defaultOpen) {
+			toggleContainerOpen(true)
+		}
+
+		toggleBtn.addEventListener('click', () => {
+			if (container.style.display === 'none') {
+				toggleContainerOpen(true)
+			} else {
+				toggleContainerOpen(false)
 			}
 		})
 		// Create float button end
@@ -225,8 +244,8 @@ window.onerror = (message, source, lineno, colno, error) => {
 	appendToContainer(message + '::' + source.split('/')[3] + ':' + lineno, 'error')
 }
 
-const outfront = (config = null) => {
-	createButtonAndContainer(config)
+const outfront = (options = {}) => {
+	createButtonAndContainer(options)
 }
 
 // window.onload = () => outfront()

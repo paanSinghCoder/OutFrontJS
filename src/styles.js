@@ -1,10 +1,8 @@
 export const containerStyles = {
 	position: 'fixed',
 	overflow: 'scroll',
-	width: '300px',
-	height: '450px',
 	display: 'none',
-	zIndex: 100000,
+	zIndex: 99999999,
 	wordWrap: 'break-word',
 	overflowWrap: 'break-word',
 	marginLeft: '15px',
