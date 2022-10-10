@@ -8,7 +8,7 @@
   "scripts": {
     "build": "babel src -d dist",
     "publish": "npm run build && npm publish",
-    "link": "npm run build && npm link"
+    "start": "npm run build && sudo npm link"
   },
   "files": [
     "index.js",

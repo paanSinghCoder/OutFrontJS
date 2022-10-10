@@ -4,7 +4,7 @@ import {
 	floatButtonStyles,
 	buttonDefaultOpacity,
 	listItemStyles,
-	clearBtnStyles,
+	navBtnStyles,
 	logoTextStyles,
 	notificationBadgeStyles
 } from './styles.js'
@@ -18,7 +18,11 @@ let consoleDebug = console.debug
 let outfrontLogUl = document.createElement('UL') // Memory leak alert
 const notificationBadge = document.createElement('SPAN') // Memory leak alert
 
-const createButtonAndContainer = () => {
+let isFullScreen = false
+
+const createButtonAndContainer = configrrr => {
+	// console.log('configrrr')
+
 	try {
 		// Create container start
 		const container = document.createElement('DIV')
@@ -26,6 +30,9 @@ const createButtonAndContainer = () => {
 		for (let property in containerStyles) {
 			container.style[property] = containerStyles[property]
 		}
+		// if (opacity in config) {
+		// 	container.style.margin = config.opacity
+		// }
 		// Create container end
 
 		// Create navbar start
@@ -40,12 +47,33 @@ const createButtonAndContainer = () => {
 		const clearBtn = document.createElement('BUTTON') // button
 		clearBtn.id = 'outfront-clear-btn'
 		clearBtn.innerText = '⟲' // 🗑️ ⟲ ⌫
-		for (let property in clearBtnStyles) {
-			clearBtn.style[property] = clearBtnStyles[property]
+		for (let property in navBtnStyles) {
+			clearBtn.style[property] = navBtnStyles[property]
 		}
 		clearBtn.addEventListener('click', () => (outfrontLogUl.innerHTML = ''))
 		navbar.appendChild(clearBtn)
 		// Create clear console button end
+
+		// Create size toggle button START
+		const sizeToggleBtn = document.createElement('BUTTON')
+		sizeToggleBtn.id = 'outfront-size-toggle-btn'
+		sizeToggleBtn.innerText = '⤡'
+		for (let property in navBtnStyles) {
+			sizeToggleBtn.style[property] = navBtnStyles[property]
+		}
+		sizeToggleBtn.addEventListener('click', () => {
+			if (isFullScreen) {
+				container.style.width = '300px'
+				container.style.height = '450px'
+				isFullScreen = false
+			} else {
+				container.style.width = '90%'
+				container.style.height = '85%'
+				isFullScreen = true
+			}
+		})
+		navbar.appendChild(sizeToggleBtn)
+		// Create size toggle button END
 
 		//Create logo text start
 		let logo = document.createElement('DIV')
@@ -197,8 +225,8 @@ window.onerror = (message, source, lineno, colno, error) => {
 	appendToContainer(message + '::' + source.split('/')[3] + ':' + lineno, 'error')
 }
 
-const outfront = () => {
-	createButtonAndContainer()
+const outfront = (config = null) => {
+	createButtonAndContainer(config)
 }
 
 // window.onload = () => outfront()

@@ -4,22 +4,18 @@ export const containerStyles = {
 	width: '300px',
 	height: '450px',
 	display: 'none',
-	bottom: '85px',
 	zIndex: 100000,
 	wordWrap: 'break-word',
 	overflowWrap: 'break-word',
-	right: '20px',
 	marginLeft: '15px',
 	backgroundColor: '#fff',
 	borderRadius: '8px',
-	boxShadow: '2px 4px 5px 3px rgba(224, 224, 224, 0.8)'
+	boxShadow: '0px 3px 15px rgba(0,0,0,0.2)',
+	right: '20px',
+	bottom: '85px'
 }
 
-export const navbarStyles = {
-	position: 'sticky',
-	top: 0,
-	backgroundColor: '#fff'
-}
+// top-right, top-left, bottom-right (default), bottom-left
 
 export const floatButtonStyles = {
 	opacity: 0.8,
@@ -27,14 +23,20 @@ export const floatButtonStyles = {
 	width: '70px',
 	border: 'none',
 	height: '35px',
-	bottom: '40px',
 	zIndex: 100000,
-	right: '15px',
 	backgroundColor: '#d4ebf2',
 	color: '#fff',
 	borderRadius: '50px',
 	textAlign: 'center',
-	cursor: 'pointer'
+	cursor: 'pointer',
+	bottom: '40px',
+	right: '15px'
+}
+
+export const navbarStyles = {
+	position: 'sticky',
+	top: 0,
+	backgroundColor: '#fff'
 }
 
 export const buttonDefaultOpacity = {
@@ -50,12 +52,12 @@ export const listItemStyles = {
 	paddingRight: '15px'
 }
 
-export const clearBtnStyles = {
+export const navBtnStyles = {
 	cursor: 'pointer',
 	float: 'right',
-	paddingRight: '10px',
+	paddingRight: '14px',
 	paddingTop: '3px',
-	opacity: 0.5,
+	opacity: 0.7,
 	fontSize: '20px',
 	backgroundColor: 'transparent',
 	border: 'none'
