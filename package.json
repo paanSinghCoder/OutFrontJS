@@ -7,12 +7,12 @@
   "bin": "src/index.js",
   "scripts": {
     "build": "babel src -d dist",
-    "publish": "npm run build && npm publish",
+    "publish-now": "npm run build && npm publish",
     "start": "npm run build && sudo npm link"
   },
   "files": [
-    "index.js",
     "package.json",
+    "index.js",
     "README.md",
     "CHANGELOG.md"
   ],
