@@ -131,15 +131,15 @@ ReactDOM.render(<HelloMessage name="Taylor" />, document.getElementById('contain
 
 ## Pass config (optional)
 
-You may customize Outfront's behaviour by optionally passing config as an object:
+Customize Outfront's behaviour by optionally passing config as an object:
 
 ```jsx
 ...
 
 const config = {
-  defaultOpen: true, // true/false (default = false)
-  fullSize: true, // true/false (default = false)
-  opacity: 10 // 1-10 (default = 10)
+  defaultOpen: true, // true/false (default = false) - Console will be open by default on page load.
+  fullSize: true, // true/false (default = false) - Console will go full-screen (almost).
+  opacity: 10 // 1-10 (default = 10) - Console opacity.
 }
 
 outfront(config) // Pass config object to outfront.
