@@ -9,7 +9,6 @@
 
   <h3 align="center">OutFront JS 🚀</h3>
 
-
   <p align="center">
     Console for mobile browsers.
     <br />
@@ -128,6 +127,24 @@ import outfront from 'outfront' // import outfront JS
 outfront() // Call it on top of project.
 
 ReactDOM.render(<HelloMessage name="Taylor" />, document.getElementById('container'))
+```
+
+## Pass config (optional)
+
+You may customize Outfront's behaviour by optionally passing config as an object:
+
+```jsx
+...
+
+const config = {
+  defaultOpen: true, // true/false (default = false)
+  fullSize: true, // true/false (default = false)
+  opacity: 10 // 1-10 (default = 10)
+}
+
+outfront(config) // Pass config object to outfront.
+
+...
 ```
 
 ```
